@@ -1,44 +1,57 @@
 {{!< default}}
 <div class="col-md-12 post-page">
 {{#post}}
-<article class="{{post_class}}  post-page-header">
-						<h3>{{title}}</h3>
-					</article>
-					<article class="post-page-main">
-						<header>
-							<hr>
-						</header>
-						<section>
-							{{content}}
-						</section>
-						<footer>
-							<hr>
-							<time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-						</footer>
-					</article>
-					
-					<div class="post-page-share">
-						<h3>
-						Share this post on
-						</h3>
-						<hr>
-						<a target="_blank" href="http://v.t.sina.com.cn/share/share.php?title={{encode title}}&amp;url={{url absolute="true"}}"><i class="iconfont icon-weibo"></i></a>
-						<a href=""><i class="iconfont icon-txwb2"></i></a>
-						<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"><i class="iconfont icon-facebook"></i></a>
-						<a target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="iconfont icon-google"></i></a>
-					</div>
-					<div class="post-page-readmore">
-						<h3>
-						Recommended reading
-						</h3>
-						<hr>
-						{{#next_post}}
-							<p>Last one : &nbsp;&nbsp;<a href="{{url}}">{{title}}</a></p>
-						{{/next_post}}
-						{{#prev_post}}
-							<p>Next article : &nbsp;&nbsp;<a href="{{url}}">{{title}}</a></p>
-						{{/prev_post}}
-					</div>
-				</div>
+	<article class="post-page-main">
+		<header style="color: #ccc;">
+			<h3 style="text-align: left; display: inline; margin-right: 10px;">{{title}}</h3>
+			<p style="text-align: right; display: inline;">{{author.name}}{{#if author.website}}<a href="{{author.website}}"><i class="fa fa-external-link" aria-hidden="true"></i></a>{{/if}}</a><time style="margin-left: 5px;" class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></p>
+			<hr>
+		</header>
+		<section>
+			{{content}}
+		</section>
+		<footer>
+			<hr>
+		</footer>
+	</article>
+
+	<!--<div class="post-page-share">
+		<h3>
+		Share this post on
+		</h3>
+		<hr>
+		<a target="_blank" href="http://v.t.sina.com.cn/share/share.php?title={{encode title}}&amp;url={{url absolute="true"}}"><i class="iconfont icon-weibo"></i></a>
+		<a href=""><i class="iconfont icon-txwb2"></i></a>
+		<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"><i class="iconfont icon-facebook"></i></a>
+		<a target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="iconfont icon-google"></i></a>
+	</div>-->
+	<div class="post-page-author">
+		{{#author}}
+		<h3>Author Info - {{name}}</h3>
+		<hr>
+		<img src="{{image}}" alt="Author's Profile Image" />
+		{{#if bio}}<p class="author-bio">{{bio}}</p>{{#else}}<p class="author-bio">This Author Dosn't have own Bio.</p>{{/if}}
+		{{/author}}
+	</div>
+	<div class="post-page-readmore">
+	<!-- TODO:Random Page -->
+		<h3>Other Posts</h3>
+		<hr>
+		{{#next_post}}
+			<p>Last one : <a href="{{url}}">{{title}}</a></p>
+		{{/next_post}}
+		{{#prev_post}}
+			<p>Next article : <a href="{{url}}">{{title}}</a></p>
+		{{/prev_post}}
+	</div>
+	<div class="post-page-ad">
+		<h3>Ad for Server Price</h3>
+		<hr>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Komi -->
+		<ins class="adsbygoogle" style="display:inline-block;width:100%;height:90px" data-ad-client="ca-pub-6081569795236180" data-ad-slot="4242039759"></ins>
+		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	</div>
+</div>
 {{/post}}
 					

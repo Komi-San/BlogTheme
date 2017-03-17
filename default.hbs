@@ -40,14 +40,13 @@
 		</nav>
 	</header>
 <div class="container">
-			<!-- 主体开始 -->
 	<main class="row main">
-		<!-- 文章栏开始 -->
+		<!-- Main Body -->
 		{{{body}}}
 	</main>
-	<!-- 底部开始 -->
+	<!-- Footer -->
 	<footer class="col-md-12 footer-info">
-		Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> (Website  based on <a href="https://ghost.org">Ghost</a>, Themes <a href="https://github.com/weic96/We-Ghost">We-Ghost</a> & By: <a href="http://weic96.cn">Weic Ma</a> .)
+		Copyright &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>
 	</footer>
 </div>
 	<a id="back-btn" href="javascript:;" ></a>
@@ -57,6 +56,6 @@
 	<script src={{asset "/js/instantclick.min.js"}} data-no-instant></script>
 	<script data-no-instant>InstantClick.init();</script>
 	{{!-- Ghost outputs important scripts and data with this tag --}}
- {{ghost_foot}}
+	{{ghost_foot}}
 </body>
 </html>

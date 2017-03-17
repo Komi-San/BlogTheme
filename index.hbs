@@ -5,45 +5,34 @@
 		{{pagination}}
 </div>
 <div class="col-md-4">
-					<div class="sidebar-about index-sidebar">
-						<h3 class="sidebar-title">About</h3>
-						<hr>
-						<div class="sidebar-about-logo">
-							<img src="{{@blog.logo}}">
-						</div>
-{{!-- 这里是关于我的地盘   (about me) --}}
-						<p>Pink is Perfect Color</p>
-					</div>
-					<div class="index-sidebar sidebar-social-cintact">
-						<h3>Social contact</h3>
-						<hr>
-{{!-- 这里是社交按钮的地盘   (Social contact) --}}
-						<a href=""><i class="iconfont icon-github1"></i></a>
-					</div>
-					<div class="index-sidebar sidebar-follow">
-						<h3>Follow</h3>
-						<hr>
-{{!-- 这里是关注按钮的地盘   (follow me) --}}
-						<!--<a href=""><i class="iconfont icon-weibo1"></i></a>
-						<a href=""><i class="iconfont icon-txweibo"></i></a>
-						<a href=""><i class="iconfont icon-tieba1"></i></a>
-						<a href=""><i class="iconfont icon-youku"></i></a>
-						<a href=""><i class="iconfont icon-youtube1"></i></a>
-						<a href=""><i class="iconfont icon-facebook-copy"></i></a>
-						<a href=""><i class="iconfont icon-tuite"></i></a>
-						<a href=""><i class="iconfont icon-google1"></i></a>-->
-					</div>
-					<div class="index-sidebar sidebar-tag">
-						<h3>Tags</h3>
-						<hr>
-						{{tag_cloud limit="all"}}
-					</div>
-					<div class="index-sidebar sidebar-link">
-						<h3>Link</h3>
-						<hr>
-						<ul>
-{{!-- 这里是友情链接的地盘   (Links) --}}
-							<li><a href=""><i class="iconfont icon-link"></i> Link Name</a></li>
-						</ul>
-					</div>
-				</div>
+	<div class="sidebar-about index-sidebar">
+		<h3 class="sidebar-title">About</h3>
+		<hr>
+		<div class="sidebar-about-logo">
+			<img src="https://twitter.com/Komi_San/profile_image?size=original">
+		</div>
+		{{!-- About Me --}}
+		<p>Komi</p>
+		<p>Pink is Perfect Color</p>
+	</div>
+	<div class="index-sidebar sidebar-social-cintact">
+		<h3>Social contact</h3>
+		<h5>Follow Me!</h5>
+		<hr>
+		{{!-- Social contact --}}
+		<a href="//github.com/Komi-San"><i class="fa fa-github"></i></a>
+	</div>
+	<div class="index-sidebar sidebar-tag">
+		<h3>Tags</h3>
+		<hr>
+		{{tag_cloud limit="all"}}
+	</div>
+	<!--<div class="index-sidebar sidebar-link">
+		<h3>Links</h3>
+		<hr>
+		<ul>
+			{{!-- Links --}}
+			<li><a href=""><i class="iconfont icon-link"></i> Link Name</a></li>
+		</ul>
+	</div>-->
+</div>
